@@ -1,0 +1,43 @@
+createteam team1
+createboard team1 board1
+createmember member1 team1
+createbug team1 board1 FirstBugItem bug1Description Active Medium Major
+createbug team1 board1 SecondBugItem bug1Description Active Medium Major
+createbug team1 board1 ThirdBugItem bug1Description Fixed Medium Major
+createstory team1 board1 SecondStory story1Description Done Low Medium
+createfeedback team1 board1 ThirdFeedback feedback1Description New 3
+showtasks
+showtasks FirstBugItem
+assigntask 1 member1
+assigntask 2 member1
+assigntask 3 member1
+assigntask 4 member1
+assigntask 2 member1
+showassignables -a member1 -s Active
+showassignables -a member1
+showassignables -s Active
+showassignables
+addcomment 1 author1 {{this is first comment}}
+addcomment 1 author1 {{this is secondcomment}}
+printcomments 1
+removecomment 1 author1 {{this is first comment}}
+printcomments 1
+addstep {{First, you should do this.}} 1
+addstep {{Second, you should do that.}} 1
+showsteps 1
+removestep {{First, you should do this.}} 1
+showsteps 1
+changestatus 1 fixed //bug status w msg
+changebugseverity 1 critical
+changebugpriority 1 high
+changestorypriority 4 low
+changestorysize 4 large
+showworkitemactivity 1
+showworkitemactivity 2
+showworkitemactivity 3
+showmembers team1
+showmemberactivity member1
+showboardactivity team1 board1
+changestatus 1 fixed
+changerating 5 5
+exit
